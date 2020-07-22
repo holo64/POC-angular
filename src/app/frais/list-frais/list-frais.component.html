@@ -1,24 +1,20 @@
 <p>list-frais works!</p>
 
-<!-- <h1 class='center'>{{title}}</h1>
-<div *ngIf="frais?.length >0" class='container listfrais'></div>
-
-<div class='container listfrais'>
-  <div *ngFor='let onefrais of frais' class="card-grid" (click)="selectFrais(frais)"> -->
-      <!-- <div class="card-image">
-            <img [src]="frais.image">
-          </div> -->
-      <!-- <div class="card-stacked">
+<h1 class='center'>{{title}}</h1>
+<div class='container listpokemons'>
+  <div *ngFor='let item of frais' class="card-grid" (click)="selectFrais(item)" >
+  
+      <div class="card-stacked">
         <div class="card-content">
-          <h2>{{ frais.description }}</h2>
-          <p><small>{{ frais.created_at | date:"dd/MM/yyyy"  }}</small></p> -->
-          <!-- <span *ngFor='let type of frais.types'
-            class="chip type{{ type }}">{{ type }}</span> -->
-        <!-- </div>
-      </div> -->
-  <!-- </div> -->
-<!--</div>-->
-<!-- <p *ngIf="frais?.length <1" class='center'>Aucun frais ...</p> -->
+          <h2>{{ item.description }}</h2>
+          <h3>{{ item.montant }}</h3>
+          
+          
+        </div>
+      </div>
+  </div>
+</div>
+
 
 <p class='center'>
   <a href="./frais/create">Nouveau Frais</a>

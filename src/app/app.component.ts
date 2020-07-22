@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Frais } from './frais/frais';
+import { FRAIS } from './frais/mock-frais';
 
 
 @Component({
@@ -8,7 +9,12 @@ import { Frais } from './frais/frais';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'POC Expense Manager';
 
-  public frais:Frais [];
+  title = 'POC Expense Manager';
+  public tabObjetsFrais:Frais [];
+
+  ngOnInit(): void {
+    this.tabObjetsFrais = FRAIS;
+  }
+
 }

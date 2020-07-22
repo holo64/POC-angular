@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {FraisModule} from './frais/frais.module';
+
+import { FraisModule } from './frais/frais.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ClientsModule } from './clients/clients.module'; 
 
