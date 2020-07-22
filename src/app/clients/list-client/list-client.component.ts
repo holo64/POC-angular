@@ -11,19 +11,27 @@ import { Router } from '@angular/router';
   providers: [ClientsService]  //déclaration des fournisseurs de service
 })
 export class ListClientComponent implements OnInit {
-  title = 'Clients';
-  clients: Client[]; 
+  public title = 'Clients';
+  public clients: Client[]; 
 
   constructor(private router: Router, private clientsService: ClientsService) { }
 
   ngOnInit(): void {
     //this.clients = CLIENTS;
     //le service peut être utilisé
-    this.clients = this.clientsService.getClients(); 
+    //this.clients = this.clientsService.getClients();
+    this.clientsService.getClients()
+    .subscribe(data => {
+      console.log('Liste Clients ');
+      this.clients = data;
+    });
+    
   }
 
   selectClient(client: Client) {
     console.log('Vous avez selectionné ' + client.nom);
+    let link = ['clients', client.id];
+    this.router.navigate(link);
   }
 
 }
