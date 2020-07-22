@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FraisModule} from './frais/frais.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ClientsModule } from './clients/clients.module'; 
+
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';// import ajout module HttpClient
 
 @NgModule({
   declarations: [
@@ -13,6 +16,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,// declaration import ajout module HttpClient
+    ClientsModule, 
     FraisModule,
     AppRoutingModule
   ],

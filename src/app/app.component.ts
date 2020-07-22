@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Frais } from './frais/frais';
 
 
 @Component({
@@ -8,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'POC Expense Manager';
+
+  public frais:Frais [];
 }
