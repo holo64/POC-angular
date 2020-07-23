@@ -6,10 +6,17 @@
   
       <div class="card-stacked">
         <div class="card-content">
+
+          <p>{{item.typeFrais}}</p>
+          <p>Date du paiement : <small>{{ item.datePaiement | date:"dd/MM/yyyy"  }}</small></p>
           <h2>{{ item.description }}</h2>
-          <h3>{{ item.montant }}</h3>
+          <h3>{{ item.montant }} Euros</h3>
+          <h3>{{ item.typePaiement }}</h3>
+          <p>justificatif</p>
+          Demande de remboursement envoyée le {{ item.createdAt | date:"dd/MM/yyyy" }}
           
-          
+
+
         </div>
       </div>
   </div>
