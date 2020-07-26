@@ -1,11 +1,12 @@
 <p>list-client works!</p>
 
-<h1 class='center'>{{ title }}</h1>
-<div *ngIf="clients?.length >0" class='container listpokemons'>
+<h3 class='center'>Pour créer votre frais, sélectionner un client<br />
+  Liste {{ title }}</h3>
+<div *ngIf="clients?.length >0"  class='container listpokemons'>
   <div *ngFor='let client of clients' class="card-grid" (click)="selectClient(client)">
       <div class="card-stacked">
         <div class="card-content">
-          <h2>{{ client.nom }}</h2>
+          <h2> {{ client.nom }}</h2>
         
           
         </div>
@@ -13,4 +14,5 @@
   </div>
 </div>
 <p *ngIf="clients?.length<1" class="center">Aucun Client ...</p>
+
 

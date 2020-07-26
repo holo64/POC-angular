@@ -6,8 +6,8 @@ import { EditFraisComponent } from './edit-frais/edit-frais.component';
 import { ListFraisComponent } from './list-frais/list-frais.component';
 
 import { FraisRoutingModule } from './frais-routing.module';
-
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { FraisFormComponent } from './frais-form/frais-form.component';
 
 
 
@@ -16,10 +16,12 @@ import { FraisRoutingModule } from './frais-routing.module';
     CreateFraisComponent,
     DetailFraisComponent,
     EditFraisComponent,
-    ListFraisComponent
+    ListFraisComponent,
+    FraisFormComponent
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     FraisRoutingModule
   ]
 })

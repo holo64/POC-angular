@@ -9,7 +9,7 @@ import { CreateFraisComponent }  from './create-frais/create-frais.component';
 // les routes du module Frais
 const fraisRoutes: Routes = [
     { path: 'frais', component: ListFraisComponent },
-    { path: 'frais/create', component: CreateFraisComponent },
+    { path: 'frais/create/:id', component: CreateFraisComponent },
     { path: 'frais/:id', component: DetailFraisComponent },
     { path: 'frais/edit/:id', component: EditFraisComponent },
 ];

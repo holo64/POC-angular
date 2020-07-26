@@ -8,6 +8,7 @@ import { ClientsService } from './clients.service';
 
 @NgModule({
   declarations: [ListClientComponent],
+  exports: [ ListClientComponent ], //exporte le composant pour l'utiliser dans le module frais
   imports: [
     CommonModule,
     ClientRoutingModule
