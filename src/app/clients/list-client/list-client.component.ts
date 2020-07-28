@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./list-client.component.css'],
   providers: [ClientsService]  //déclaration des fournisseurs de service
 })
+
 export class ListClientComponent implements OnInit {
   public title = 'Clients';
   public clients: Client[]; 
