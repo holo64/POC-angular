@@ -12,7 +12,8 @@ export const FRAIS: Frais[] = [
     createdAt:  new Date("2020-05-21"),     //date de création
     createdBy: 'Peter',                    //Création par
     lastUpdatedAt:  new Date("2020-05-21"), //Date Modification
-    lastUpdatedBy: 'Peter'                 //Modifié par
+    lastUpdatedBy: 'Peter',                 //Modifié par
+    client: "/api/clients/4"                 
 
   },
   {
@@ -26,7 +27,8 @@ export const FRAIS: Frais[] = [
     createdAt:  new Date("2020-05-21"),     //date de création
     createdBy: 'Peter',                    //Création par
     lastUpdatedAt:  new Date("2020-05-21"), //Date Modification
-    lastUpdatedBy: 'Peter'                 //Modifié par
+    lastUpdatedBy: 'Peter',                //Modifié par
+    client: "/api/clients/4"
 
   }
   

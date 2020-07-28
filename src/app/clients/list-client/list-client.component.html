@@ -1,11 +1,29 @@
 <p>list-client works!</p>
 
+
+
+<div> <p>Rechercher un Client : 
+  <!-- événement keyup sur un input text -->
+  <input #nom (keyup)="onKey(nom.value)"/>
+  <!-- retour du composant à chaque saisie -->
+  </p>
+  <!-- liaison directe sur le template 
+  <p>{{ nom.value }} </p> -->
+  </div>
+
+
 <h3 class='center'>Pour créer votre frais, sélectionner un client<br />
   Liste {{ title }}</h3>
 <div *ngIf="clients?.length >0"  class='container listpokemons'>
-  <div *ngFor='let client of clients' class="card-grid" (click)="selectClient(client)">
-      <div class="card-stacked">
-        <div class="card-content">
+
+
+
+  <div *ngFor='let client of clients' class="card-grid" (click)="selectClient(client)" >
+      
+
+    
+    <div class="card-stacked">
+        <div class="card-content" >
           <h2> {{ client.nom }}</h2>
         
           

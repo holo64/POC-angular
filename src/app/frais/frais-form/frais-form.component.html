@@ -1,8 +1,5 @@
 <p>frais-form works!</p>
 
-
-
-
     <!-- Le formulaire -->
     <form *ngIf="frais" [formGroup]="fraisForm" (ngSubmit)="onSubmit()" novalidate>
       <div class="card-panel">
@@ -16,14 +13,13 @@
             
             </select>
         </div> -->
-
+        <div>Nom Client  :  </div>
 
           <div> <button 
                     type="button">
                 Restaurant
                 </button>
-                <button 
-                type="button">
+                <button type="button">
                  Hôtel
                 </button>
         </div>
@@ -31,7 +27,7 @@
 
         <div class="form-group">
               
-            <label for="description">Nom Restaurant</label>
+            <label for="description">Nom Hôtel</label>
             <input type="text" formControlName="description" />
         </div>
         

@@ -11,6 +11,7 @@ export class Frais {
     createdBy: string;             //Création par
     lastUpdatedAt: Date;          //Date Modification
     lastUpdatedBy: string;        //Modifié par
+    client: string;               //id client qui induit le frais
 
     //initialisations par défaut
     constructor() { 

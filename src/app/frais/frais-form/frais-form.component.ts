@@ -43,7 +43,8 @@ export class FraisFormComponent implements OnChanges {
       createdAt: [new Date()],
       createdBy:['', Validators.required],
       lastUpdatedAt:[new Date()],
-      lastUpdatedBy:['', Validators.required]
+      lastUpdatedBy:['', Validators.required],
+      client:['', Validators.required]
      });
   }
 
@@ -107,6 +108,6 @@ export class FraisFormComponent implements OnChanges {
 
   goBack(): void {
     //pour revenir à la liste
-    this.router.navigate(['/frais']);
+    this.router.navigate(['/clients']);
   }
 }

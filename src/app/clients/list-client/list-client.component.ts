@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class ListClientComponent implements OnInit {
   public title = 'Clients';
   public clients: Client[]; 
+  
 
   constructor(private router: Router, private clientsService: ClientsService) { }
 
@@ -30,8 +31,25 @@ export class ListClientComponent implements OnInit {
 
   selectClient(client: Client) {
     console.log('Vous avez selectionné ' + client.nom);
-    let link = ['frais/create', client.id];
+    let link = ['frais/create/', client.id];
     this.router.navigate(link);
   }
+
+
+  //public valeur: string = '';
+  onKey(nom: string) {
+    //this.valeur = nom;
+    //methode search du service clientService
+   this.clientsService.searchClients(nom) // a ne pas oublier
+   .subscribe(data => {
+     console.log('search Clients');
+     console.log(data);
+     this.clients = data;
+     
+   });
+
+  }
+
+
 
 }

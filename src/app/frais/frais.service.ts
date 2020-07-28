@@ -14,7 +14,7 @@ export class FraisService {
   constructor(private http: HttpClient) {}
 
   //Retourne tous les frais
-  //le .json est nécessaire avec ApiPlatform qui a servit à l'API Web
+  //le .json est nécessaire avec ApiPlatform qui a servi à l'API Web
   getFrais(): Observable<Frais[]> {
     return this.http.get<Frais[]>(this.urlApi + '.json');    
   }
