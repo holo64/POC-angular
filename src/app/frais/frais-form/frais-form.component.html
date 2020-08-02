@@ -14,13 +14,19 @@
             
             </select>
         </div> -->
-        <div>Nom Client  :  </div>
+        <div>Client visité :  </div>
+        
+        <div class="form-group">
+              
+            <label for="typeFrais">Type Frais</label>
+            <input type="text" formControlName="typeFrais" />
+        </div>
 
-          <div> <button 
-                    type="button">
+
+          <div> <button (click)="afficherFormResto()" type="button">
                 Restaurant
                 </button>
-                <button type="button">
+                <button (click)="afficherFormHotel()" type="button">
                  Hôtel
                 </button>
         </div>
@@ -45,12 +51,22 @@
           </div>
 
           <div class="form-group">
+            <label for="typePaiement">Type de Paiement</label>
+            <select name="typePaiement" id="typePaiement_select">
+                <option value="CB">CB</option>
+                <option value="cheque">Chèque</option>
+                <option value="cash">Espèces</option>
+            
+            </select>
+        </div>
+
+          <div class="form-group">
               <label for="justificatif">Justificatif</label>
               <input type="file" formControlName="justificatif" />
           </div>
 
-          <!-- <div class="form-group">
-              <label for="ptdegat">Types de frais</label>
+           <!-- <div class="form-group">
+              <label for="typeFrais">Types de frais</label>
               <div>
                   <div *ngFor="let t of fraisTypes; let i=index">
                       <label>
@@ -59,7 +75,7 @@
                       </label>
                   </div>
               </div>
-          </div> -->
+          </div>  -->
 
           <div class="form-actions">
               <button type="submit" [disabled]="fraisForm.pristine">Enregistrer</button>

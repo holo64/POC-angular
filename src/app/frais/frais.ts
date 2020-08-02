@@ -9,14 +9,25 @@ export class Frais {
     justificatif: string;           //url de son image
     createdAt: Date;               //date de création
     createdBy: string;             //Création par
-    lastUpdatedAt: Date;          //Date Modification
-    lastUpdatedBy: string;        //Modifié par
+    lastUpdateAt: Date;          //Date Modification
+    lastUpdateBy: string;        //Modifié par
     client: string;               //id client qui induit le frais
 
     //initialisations par défaut
     constructor() { 
-      this.id=0;
-      this.createdAt = new Date();
+      this.typeFrais='resto';
+      this.datePaiement= new Date();
+      this.description= 'test';
+      this.montant=20;
+      this.typePaiement= 'cb';
+      this.justificatif='';
+      this.createdAt = new Date("2020-05-21");
+      this.createdBy= '';
+      this.lastUpdateAt= new Date("2020-05-19");
+      this.lastUpdateBy= '';  
       //this.typeFrais = [];
+      this.client="/api/clients/4";
+
+      
     }
 }

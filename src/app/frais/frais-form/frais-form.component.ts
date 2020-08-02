@@ -18,11 +18,11 @@ export class FraisFormComponent implements OnChanges {
                                // disponible dans le module Input d'Angular
   
   // types disponibles pour un frais 
-  fraisTypes: Array<any> = [
-    { value: 'Restaurant' },
-    { value: 'Hôtel' }
+  // fraisTypes: Array<any> = [
+  //   { value: 'Restaurant' },
+  //   { value: 'Hôtel' }
  
-  ];
+  // ];
 
   //injection dela dépendance du FormBuilder
   constructor(private router: Router, private fb: FormBuilder,
@@ -42,42 +42,42 @@ export class FraisFormComponent implements OnChanges {
       justificatif: ['', Validators.required],
       createdAt: [new Date()],
       createdBy:['', Validators.required],
-      lastUpdatedAt:[new Date()],
-      lastUpdatedBy:['', Validators.required],
+      lastUpdateAt:[new Date()],
+      lastUpdateBy:['', Validators.required],
       client:['', Validators.required]
      });
   }
 
   // Détermine si le type passé en paramètres appartient 
   // ou non au frais en cours d'édition
-  hasType(type: string): boolean {
-    let index = this.frais.typeFrais.indexOf(type);
-    if (index > -1) return true;
-    return false;
-}
+//   hasType(type: string): boolean {
+//     let index = this.frais.typeFrais.indexOf(type);
+//     if (index > -1) return true;
+//     return false;
+// }
 
 
   // pour mettre à jour la propriété typeFrais du formulaire
   // à partir de la liste fraisTypes affichés, non liée au formulaire !
-  onCheckboxChange(e) {
-    const typesArray: FormArray = this.fraisForm.get('fraisTypes') as FormArray;
+  // onCheckboxChange(e) {
+  //   const typesArray: FormArray = this.fraisForm.get('fraisTypes') as FormArray;
   
-    if (e.target.checked) {
-      typesArray.push(new FormControl(e.target.value));
-    } else {
-      let i: number = 0;
-      typesArray.controls.forEach((item: FormControl) => {
-        if (item.value == e.target.value) {
-          typesArray.removeAt(i);
-          return;
-        }
-        i++;
-      });
-    }
+  //   if (e.target.checked) {
+  //     typesArray.push(new FormControl(e.target.value));
+  //   } else {
+  //     let i: number = 0;
+  //     typesArray.controls.forEach((item: FormControl) => {
+  //       if (item.value == e.target.value) {
+  //         typesArray.removeAt(i);
+  //         return;
+  //       }
+  //       i++;
+  //     });
+  //   }
 
-    //nécessaire pour changer l'état du formulaire
-    this.fraisForm.markAsDirty();
-  }
+  //   //nécessaire pour changer l'état du formulaire
+  //   this.fraisForm.markAsDirty();
+  // }
   
 
   // ATTENTION !
@@ -110,4 +110,14 @@ export class FraisFormComponent implements OnChanges {
     //pour revenir à la liste
     this.router.navigate(['/clients']);
   }
+
+
+  afficherFormResto(): void {
+    console.log('form Resto');
+  }
+  afficherFormHotel(): void {
+    console.log('form Hotel');
+  }
+
+
 }
