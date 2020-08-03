@@ -1,8 +1,9 @@
 import { Component, Input, OnChanges } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
 import { Frais } from '../frais';
 import { FraisService } from '../frais.service';
+
 
 @Component({
   selector: 'app-frais-form',
@@ -11,7 +12,7 @@ import { FraisService } from '../frais.service';
 })
 
 export class FraisFormComponent implements OnChanges {
-
+  //id_client: number;
   fraisForm: FormGroup; //le formulaire 
 
   @Input() frais: Frais; // propriété d'entrée du composant obligatoire
@@ -25,7 +26,9 @@ export class FraisFormComponent implements OnChanges {
   // ];
 
   //injection dela dépendance du FormBuilder
-  constructor(private router: Router, private fb: FormBuilder,
+  constructor(private route:  ActivatedRoute,
+              private router: Router,
+              private fb: FormBuilder,
               private fraisService: FraisService) { }
 
   //création du formulaire grâce au FormBuilder
@@ -57,6 +60,7 @@ export class FraisFormComponent implements OnChanges {
 // }
 
 
+
   // pour mettre à jour la propriété typeFrais du formulaire
   // à partir de la liste fraisTypes affichés, non liée au formulaire !
   // onCheckboxChange(e) {
@@ -85,8 +89,19 @@ export class FraisFormComponent implements OnChanges {
   // car le paramètre @Input sera récupéré en asynchrone
   // et ne sera pas défini sur onInit !!! 
   ngOnChanges(): void {
+  //recup de l'id dans l'url (la route)
+    //le snapshot permet de rendre la lecture synchrone 
+    // this.id_client = +this.route.snapshot.paramMap.get('id');
+    // console.log(this.id_client);
+    let id_client=+this.route.snapshot.paramMap.get('id');
+    
+    // this.fraisForm = this.createFormGroup();
+    // this.frais.client="api/clients/" + this.id_client.toString()
+    // if(this.frais!=null) {
+    //   this.fraisForm.patchValue( this.frais );
+    // } 
     this.fraisForm = this.createFormGroup();
-  
+    this.frais.client="/api/clients/" + id_client.toString()
     if(this.frais!=null) {
       this.fraisForm.patchValue( this.frais );
     }    
