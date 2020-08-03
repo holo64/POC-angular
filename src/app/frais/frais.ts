@@ -16,14 +16,14 @@ export class Frais {
     //initialisations par défaut
     constructor() { 
       this.typeFrais='resto';
-      this.datePaiement= new Date();
-      this.description= 'test';
-      this.montant=20;
-      this.typePaiement= 'cb';
+      //this.datePaiement= new Date();
+      //this.description= 'test';
+      //this.montant=20;
+      //this.typePaiement= 'cb';
       this.justificatif='';
-      this.createdAt = new Date("2020-05-21");
+      this.createdAt = new Date();
       this.createdBy= '';
-      this.lastUpdateAt= new Date("2020-05-19");
+      this.lastUpdateAt= new Date();
       this.lastUpdateBy= '';  
       //this.typeFrais = [];
       //this.client="/api/clients/4";

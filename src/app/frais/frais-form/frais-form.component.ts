@@ -94,7 +94,7 @@ export class FraisFormComponent implements OnChanges {
     // this.id_client = +this.route.snapshot.paramMap.get('id');
     // console.log(this.id_client);
     let id_client=+this.route.snapshot.paramMap.get('id');
-    
+    console.log (id_client);
     // this.fraisForm = this.createFormGroup();
     // this.frais.client="api/clients/" + this.id_client.toString()
     // if(this.frais!=null) {
