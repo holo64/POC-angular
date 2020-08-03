@@ -128,24 +128,7 @@ body{
   }
   
   .typeAcier { background-color: #bdbdbd; }
-  .typeCombat { background-color: #ff5722; }
-  .typeDragon { background-color: #7e57c2; }
-  .typeEau { background-color: #42a5f5; }
-  .typeElectrik { background-color: #eeff41; }
-  .typeFée { background-color: #f48fb1; }
-  .typeFeu { background-color: #ef5350; }
-  .typeGlace { background-color: #f9fbe7 ; }
-  .typeInsecte { background-color: #8d6e63; }
-  .typeNormal { background-color: #e0e0e0; }
-  .typeObscur { background-color: #424242 ; }
-  .typePlante { background-color: #66bb6a; }
-  .typePoison { background-color: #ff7043; }
-  .typePsy { background-color: #9575cd ; }
-  .typeRoche { background-color: #757575; }
-  .typeSol { background-color: #a1887f; }
-  .typeSpectre { background-color: #303f9f ; }
-  .typeTénèbres { background-color: #1a237e; }
-  .typeVol { background-color: #42a5f5; }
+  
   
   /*******************************************************
   * container bootstrap : 1200px - 992px - 768px - 576px */
