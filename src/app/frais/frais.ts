@@ -26,7 +26,7 @@ export class Frais {
       this.lastUpdateAt= new Date("2020-05-19");
       this.lastUpdateBy= '';  
       //this.typeFrais = [];
-      this.client="/api/clients/4";
+      //this.client="/api/clients/4";
 
       
     }
