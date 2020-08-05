@@ -12,6 +12,7 @@ const fraisRoutes: Routes = [
     { path: 'frais/create/:id', component: CreateFraisComponent },
     { path: 'frais/:id', component: DetailFraisComponent },
     { path: 'frais/edit/:id', component: EditFraisComponent },
+   
 ];
   
 @NgModule({

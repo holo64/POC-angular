@@ -33,6 +33,7 @@ export class ListClientComponent implements OnInit {
   selectClient(client: Client) {
     console.log('Vous avez selectionné ' + client.nom);
     let link = ['frais/create/', client.id];
+
     this.router.navigate(link);
   }
 

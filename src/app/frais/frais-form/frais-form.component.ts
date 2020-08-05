@@ -5,6 +5,7 @@ import { Frais } from '../frais';
 import { FraisService } from '../frais.service';
 
 
+
 @Component({
   selector: 'app-frais-form',
   templateUrl: './frais-form.component.html',
@@ -119,6 +120,8 @@ export class FraisFormComponent implements OnChanges {
         console.log("Error", error);
       }
     );
+
+    this.router.navigate(['/frais']);
   }
 
   goBack(): void {
