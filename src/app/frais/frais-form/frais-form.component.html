@@ -60,7 +60,7 @@
 
           <div class="form-group">
               <label for="justificatif">Justificatif</label>
-              <input type="file" formControlName="justificatif" />
+              <input type="file" formControlName="justificatif" (change)="test($event)"/>
           </div>
 
            <!-- <div class="form-group">

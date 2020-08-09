@@ -8,7 +8,7 @@ import { Frais } from './frais';
 })
 export class FraisService {
   
-  private urlApi: string = 'http://localhost/poc/public/api/frais';
+  private urlApi: string = 'http://poc/api/frais';
   
   //déclaration de HttpClient par injection de dépendance
   constructor(private http: HttpClient) {}

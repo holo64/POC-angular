@@ -137,5 +137,9 @@ export class FraisFormComponent implements OnChanges {
     console.log('form Hotel');
   }
 
+  test(event){
+    console.log(event.target.files)
+  }
+
 
 }

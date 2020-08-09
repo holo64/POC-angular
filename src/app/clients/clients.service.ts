@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class ClientsService {
 
-  private urlApi: string = 'http://127.0.0.1/poc/public/api/clients';
+  private urlApi: string = 'http://poc/api/clients';
   
   //déclaration de HttpClient par injection de dépendance
   constructor(private http: HttpClient) { }
