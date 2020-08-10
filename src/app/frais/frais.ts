@@ -15,7 +15,7 @@ export class Frais {
 
     //initialisations par défaut
     constructor() { 
-      this.typeFrais='resto';
+      //this.typeFrais='resto';
       //this.datePaiement= new Date();
       //this.description= 'test';
       //this.montant=20;
