@@ -108,7 +108,9 @@ export class FraisFormComponent implements OnChanges {
     }    
   }
 
-  onSubmit(){   
+  onSubmit(){  
+    let id_client=+this.route.snapshot.paramMap.get('id');
+    console.log (id_client); 
     //recupère les valeurs du formulaire
     this.frais = this.fraisForm.value as Frais;
     this.fraisService.saveFrais(this.frais)
@@ -121,11 +123,14 @@ export class FraisFormComponent implements OnChanges {
       }
     );
 
-    this.router.navigate(['/frais']);
+    //this.router.navigate(['/frais']);
+    this.router.navigate(['/frais/create/'+id_client+'/ok']);
+
+  
   }
 
   goBack(): void {
-    //pour revenir à la liste
+    //pour revenir à la liste de clients
     this.router.navigate(['/clients']);
   }
 
