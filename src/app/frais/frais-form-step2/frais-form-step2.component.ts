@@ -15,13 +15,19 @@ export class FraisFormStep2Component implements OnInit {
   }
 
   goListeClients(): void {
-    //pour revenir à la liste de clients
+    //pour aller à la liste de clients
     this.router.navigate(['/clients']);
   }
 
   goListeFrais(): void {
     //pour afficher la liste de frais
     this.router.navigate(['/frais']);
+  }
+
+  goFraisFormWithClientSelected(){
+    let id_client=+this.route.snapshot.paramMap.get('id');
+    console.log (id_client); 
+    this.router.navigate(['/frais/create/'+id_client]);
   }
 
 }
