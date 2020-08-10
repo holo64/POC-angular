@@ -30,4 +30,10 @@ export class FraisFormStep2Component implements OnInit {
     this.router.navigate(['/frais/create/'+id_client]);
   }
 
+  goEditFrais(){
+    let id_client=+this.route.snapshot.paramMap.get('id');
+    console.log (id_client); 
+    this.router.navigate(['frais/edit/'+id_client]);
+  }
+
 }
