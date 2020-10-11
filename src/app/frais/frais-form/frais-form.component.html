@@ -33,7 +33,7 @@
         </div>
 
         <div class="form-group">   
-            <label for="description">Nom Hôtel</label>
+            <label for="description">Nom Hôtel/Restaurant</label>
             <input type="text" formControlName="description" />
         </div>
         
@@ -63,17 +63,7 @@
               <input type="file" formControlName="justificatif" (change)="test($event)"/>
           </div>
 
-           <!-- <div class="form-group">
-              <label for="typeFrais">Types de frais</label>
-              <div>
-                  <div *ngFor="let t of fraisTypes; let i=index">
-                      <label>
-                          <input type="checkbox" [value]="t.value" [checked]="hasType(t.value)" (change)="onCheckboxChange($event)"   />
-                          {{ t.value }}
-                      </label>
-                  </div>
-              </div>
-          </div>  -->
+
 
           <div class="form-actions">
               <button type="submit" [disabled]="fraisForm.pristine">Enregistrer</button>
